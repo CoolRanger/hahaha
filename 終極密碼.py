@@ -1,8 +1,12 @@
 import random
-answer = random.randint(1, 100)#產生隨機數
-maximum = 100 #建立最大值變數
-minimum = 1 #建立最小值變數
-guess = input('請猜一個數字(1~100): ')#讓使用者輸入/建立變數guess
+start = input('請決定最小值: ')
+end = input('請決定最大值: ')
+start = int(start)
+end = int(end)
+answer = random.randint(start, end)#產生隨機數
+maximum = end #建立最大值變數
+minimum = start #建立最小值變數
+guess = input('請猜一個數字: ')#讓使用者輸入/建立變數guess
 while True:
     if guess.isdigit() == True:
         guess = int(guess)
